@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Awful Eats</title>
+    <link
+      rel="stylesheet"
+      href="popup.css"
+    />
+  </head>
+  <body>
+    <header class="split-container">
+      <div>
+        <img
+          id="logo"
+          src="../icon.png"
+          alt="Awful Eats"
+        />
+      </div>
+    </header>
+
+    <!-- Settings -->
+    <section id="settings">
+      <h2>Settings</h2>
+
+      <!-- Reset the extensiopn -->
+      <div class="split-container">
+        <div>
+          <button
+            id="reset-button"
+            name="reset-button"
+          >
+            Reset
+          </button>
+
+          <p id="reset-clicked"></p>
+        </div>
+        <div>
+          <label for="reset-button">
+            Clears out the stores blocked by the extension, allowing them to be
+            seen again.
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats">
+      <h2>Stats</h2>
+
+      <!-- Show blocked stores -->
+      <div class="split-container">
+        <div>
+          <button
+            id="show-blocked-button"
+            name="show-blocked-button"
+          >
+            List
+          </button>
+        </div>
+        <div>
+          <label for="show-blocked-button">
+            Displays a list of stores that have been blocked by the extension.
+          </label>
+        </div>
+      </div>
+
+      <div id="blocked-stores">
+        <ul id="store-list"></ul>
+      </div>
+    </section>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

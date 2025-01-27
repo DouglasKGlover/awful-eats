@@ -1,0 +1,37 @@
+.bad-eats-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+.bad-eats-button:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
+}
+
+li[data-testid="carousel-slide"],
+div[data-testid="store-card"] {
+  position: relative;
+  filter: grayscale(100%) blur(10px);
+  transition: 0.3s ease;
+}
+
+li.bad-eats-visible,
+div.bad-eats-visible {
+  opacity: 1;
+  filter: none;
+  pointer-events: auto;
+}
+
+li.bad-eats-hidden,
+div.bad-eats-hidden {
+  opacity: 0.5;
+  filter: grayscale(100%) blur(10px);
+  pointer-events: none;
+}

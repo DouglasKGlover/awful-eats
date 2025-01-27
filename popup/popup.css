@@ -1,0 +1,64 @@
+body {
+  width: 500px;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #f3f3f3;
+}
+
+header {
+  background: #ff4848;
+  padding: 10px;
+}
+
+section {
+  padding: 20px;
+  border-top: 1px solid rgb(100, 100, 100);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label,
+p,
+li {
+  font-size: 1rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #ff4848;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+#logo {
+  height: 3rem;
+}
+
+.split-container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-gap: 20px;
+  padding-left: 10px;
+}
+
+.split-container > div {
+  display: flex;
+  align-items: center;
+}
