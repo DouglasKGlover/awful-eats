@@ -13,14 +13,17 @@ function getStoreCards() {
 // Function to add a button to every store card
 function addButtonsToCards(cards) {
   cards.forEach((card) => {
-    const button = document.createElement("button");
-    button.innerText = "☠️";
-    button.classList.add("bad-eats-button");
-    button.addEventListener("click", () => {
-      storeRestaurant(card);
-    });
+    // Only add a button if the card doesn't already have one
+    if (!card.querySelector(".bad-eats-button")) {
+      const button = document.createElement("button");
+      button.innerText = "☠️";
+      button.classList.add("bad-eats-button");
+      button.addEventListener("click", () => {
+        storeRestaurant(card);
+      });
 
-    card.appendChild(button);
+      card.appendChild(button);
+    }
   });
 }
 
