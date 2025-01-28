@@ -9,6 +9,10 @@ body {
 header {
   background: #ff4848;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-gap: 20px;
+  padding-left: 20px;
 }
 
 section {

@@ -19,3 +19,4 @@ Once the extension is installed, you can hide restaurants by clicking the "Skull
 - 1.0.0: Initial release
 - 1.1.0: Added support for resetting the extension, and listing all hidden restaurants
 - 1.1.1: Updated README.md; updated the popup styling
+- 1.1.2: Updated the store list functionality, now allows you to manage stores individually
