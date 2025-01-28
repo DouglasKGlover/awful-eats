@@ -31,7 +31,6 @@ function addButtonsToCards(cards) {
 function storeRestaurant(card) {
   // Get the name of the restaurant from the card
   const restaurantName = card.querySelector("h3").innerText;
-  // console.log(restaurantName);
 
   chrome.storage.sync.get("cards", (data) => {
     let cards = data.cards || [];
@@ -41,11 +40,7 @@ function storeRestaurant(card) {
       cards.push(restaurantName);
     }
 
-    // cards = [];
     chrome.storage.sync.set({ cards });
-
-    // Console log the cards to see if it's working
-    // console.log(cards);
   });
 
   // Hide the card
@@ -58,15 +53,13 @@ function hideStoredCards() {
   chrome.storage.sync.get("cards", (data) => {
     const cards = data.cards || [];
 
-    // For each storeCards, check if the name is in the cards array and hide if so
+    // For each storeCards, check if the name is in the cards array and hide or show
     storeCards.forEach((card) => {
       const restaurantName = card.querySelector("h3").innerText;
 
       if (cards.includes(restaurantName)) {
-        // Add a class to the card to hide it
         card.classList.add("bad-eats-hidden");
       } else {
-        // Add a class to the card to show it
         card.classList.add("bad-eats-visible");
       }
     });
@@ -76,11 +69,9 @@ function hideStoredCards() {
 // Check for store cards every 100 milliseconds
 function checkForStoreCards() {
   let interval = setInterval(() => {
-    // console.log("Checking for store cards...");
     storeCards = getStoreCards();
 
     if (storeCards.length) {
-      // console.log("Cards found!");
       clearInterval(interval);
 
       // Add buttons to the cards
@@ -90,8 +81,6 @@ function checkForStoreCards() {
       setTimeout(() => {
         hideStoredCards();
       }, 500);
-    } else {
-      // console.log("No cards found yet.");
     }
   }, 100);
 }
