@@ -35,15 +35,10 @@
         </div>
         <div>
           <label for="reset-button">
-            Clears out the stores blocked by the extension, allowing them to be
-            seen again.
+            Clears out all stores blocked by the extension.
           </label>
         </div>
       </div>
-    </section>
-
-    <section id="stats">
-      <h2>Stats</h2>
 
       <!-- Show blocked stores -->
       <div class="split-container">
@@ -52,18 +47,19 @@
             id="show-blocked-button"
             name="show-blocked-button"
           >
-            List
+            Manage
           </button>
         </div>
         <div>
           <label for="show-blocked-button">
-            Displays a list of stores that have been blocked by the extension.
+            Show a list of all stores that have been blocked by the extension,
+            and unblock them if desired.
           </label>
         </div>
       </div>
 
       <div id="blocked-stores">
-        <ul id="store-list"></ul>
+        <div id="store-list"></div>
       </div>
     </section>
 

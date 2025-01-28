@@ -55,10 +55,14 @@ button:hover {
   display: grid;
   grid-template-columns: 80px 1fr;
   grid-gap: 20px;
-  padding-left: 10px;
+  padding: 0 0 20px 10px;
 }
 
 .split-container > div {
   display: flex;
   align-items: center;
+}
+
+#store-list .split-container {
+  grid-template-columns: 40px 1fr;
 }
